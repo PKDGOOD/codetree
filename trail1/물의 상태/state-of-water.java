@@ -6,7 +6,7 @@ public class Main {
         int n = sc.nextInt();
     
         if(n<0) System.out.print("ice");
-        else if(n>100) System.out.print("vapor");
+        else if(n>=100) System.out.print("vapor");
         else System.out.print("water");
     }
 }
