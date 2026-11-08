@@ -9,6 +9,6 @@ public class Main {
         int bMath = sc.nextInt();
         int bEng = sc.nextInt();
 
-        System.out.println(((aMath > bMath) && (aMath > bMath)) ? 1 : 0);
+        System.out.println(((aMath > bMath) && (aEng > bEng)) ? 1 : 0);
     }
 }
