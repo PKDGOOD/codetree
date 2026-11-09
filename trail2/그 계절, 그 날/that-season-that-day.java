@@ -11,16 +11,17 @@ public class Main {
 
     // 윤년 여부
     public static boolean isYN(int y) {
-        if(y%4 != 0) return false;
         if(y%400 == 0) return true;
-        if(y%100 == 0) return false;
-        return true;
+        if(y%4 == 0 && y%100 == 0) return false;
+        if(y%4 == 0) return true;
+
+        return false;
     }
 
     // 존재하는 날짜인지 여부
     public static boolean isReal(int y, int m, int d) {
         if(m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 12) return true;
-        else if(isYN(y) && m==2 && d > 29) return false;
+        else if(!(isYN(y)) && m==2 && d >= 29) return false;
         else if(d > 30) return false;
         else return true;
     }
