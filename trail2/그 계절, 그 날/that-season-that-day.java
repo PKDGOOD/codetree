@@ -21,6 +21,7 @@ public class Main {
     // 존재하는 날짜인지 여부
     public static boolean isReal(int y, int m, int d) {
         if(m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 12) return true;
+        else if (m == 2 && d >29) return false;
         else if(!(isYN(y)) && m==2 && d >= 29) return false;
         else if(d > 30) return false;
         else return true;
