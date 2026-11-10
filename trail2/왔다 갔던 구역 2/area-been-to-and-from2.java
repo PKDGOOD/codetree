@@ -9,7 +9,7 @@ public class Main {
             int x = sc.nextInt();
             char dir = sc.next().charAt(0);
             
-            System.out.println("x, dir : " + x + ", " + dir);
+            // System.out.println("x, dir : " + x + ", " + dir);
             
             for(int j=0; j<x; j++) {
                 if(dir == 'L') {
@@ -19,7 +19,7 @@ public class Main {
                     range[pos] += 1;
                     pos++;
                 }
-                System.out.println("pos : " + (pos-1000));
+                // System.out.println("pos : " + (pos-1000));
             }
         }
 
