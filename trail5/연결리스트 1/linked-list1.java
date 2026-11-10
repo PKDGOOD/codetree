@@ -21,8 +21,12 @@ public class Main {
 
         for(int i=0; i<n; i++) {
             int comm = sc.nextInt();
-            String sValue = sc.next();
-            Node newNode = new Node(sValue);
+            String sValue = null;
+            Node newNode = null;
+            if(comm == 1 || comm == 2) {
+                sValue = sc.next();
+                newNode = new Node(sValue);
+            }
             switch(comm) {
                 case 1:
                     newNode.prev = cur.prev;
@@ -46,29 +50,12 @@ public class Main {
                     break;
                 case 3:
                     if(cur.prev != null) {
-                        Node tmp = cur.prev;
-                        if(cur.prev.prev != null) {
-                            cur.prev.prev.next = cur;
-                            cur.prev = cur.prev.prev;
-                        } else {
-                            cur.prev = null;
-                        }
-                        tmp.prev = null;
-                        tmp.next = null;
+                        cur = cur.prev;
                     }
                     break;
                 case 4:
                     if(cur.next != null) {
-                        Node tmp = cur.next;
-                        if(cur.next.next != null) {
-                            cur.next.next.prev = cur;
-                            cur.next = cur.next.next;
-                        } else {
-                            cur.next = null;
-                        }
-
-                        tmp.prev = null;
-                        tmp.next = null;
+                        cur = cur.next;
                     }
                     break;
             }
