@@ -25,9 +25,9 @@ public class Main {
             arr[i] = new Forecast(date, day, weather);
         }
 
-        Forecast result = arr[0];
+        Forecast result = new Forecast("9999-99-99", "", "");
         for(Forecast data : arr) {
-            if(data.weather == "Rain" && data.date.compareTo(result.date) > 0) {
+            if(data.weather.equals("Rain") && data.date.compareTo(result.date) < 0) {
                 result = data;
             }
         }
