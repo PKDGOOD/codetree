@@ -15,6 +15,7 @@ class Node {
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        StringBuilder sb = new StringBuilder();
         int n = sc.nextInt();
         HashMap<Integer, Node> map = new HashMap();
         for(int i=1; i<=n; i++) {
@@ -61,7 +62,6 @@ public class Main {
                     break;
                 case 4:
                     i = sc.nextInt();
-                    StringBuilder sb = new StringBuilder();
                     if(map.get(i).prev != null) {
                         sb.append(map.get(i).prev.id + " ");
                         // System.out.print(map.get(i).prev.id + " ");
@@ -80,14 +80,18 @@ public class Main {
                     System.out.println(sb.toString());
                     break;
             }
-        }   
+        }
+        // StringBuilder sb = new StringBuilder();   
         for(int i=1; i<=n; i++) {
             Node nextNode = map.get(i).next;
             if(nextNode == null) {
-                System.out.print(0 + " ");
+                sb.append(0 + " ");
+                // System.out.print(0 + " ");
             } else {
-                System.out.print(nextNode.id + " ");
+                sb.append(nextNode.id + " ");
+                // System.out.print(nextNode.id + " ");
             }
         }
+        System.out.println(sb.toString());
     }
 }
