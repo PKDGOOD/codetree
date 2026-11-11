@@ -61,17 +61,23 @@ public class Main {
                     break;
                 case 4:
                     i = sc.nextInt();
+                    StringBuilder sb = new StringBuilder();
                     if(map.get(i).prev != null) {
-                        System.out.print(map.get(i).prev.id + " ");
+                        sb.append(map.get(i).prev.id + " ");
+                        // System.out.print(map.get(i).prev.id + " ");
                     } else {
-                        System.out.print(0 + " ");
+                        sb.append(0 + " ");
+                        // System.out.print(0 + " ");
                     }
                     if(map.get(i).next != null) {
-                        System.out.print(map.get(i).next.id + " ");
+                        sb.append(map.get(i).next.id + " ");
+                        // System.out.print(map.get(i).next.id + " ");
                     } else {
-                        System.out.print(0 + " ");
+                        sb.append(0 + " ");
+                        // System.out.print(0 + " ");
                     }
-                    System.out.println();
+                    // sb.append("\n");
+                    System.out.println(sb.toString());
                     break;
             }
         }   
