@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static int n;
@@ -13,6 +13,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             points[i] = sc.nextInt();
         }
+        Arrays.sort(points);
 
         StringBuilder sb= new StringBuilder();
         int a, b;
