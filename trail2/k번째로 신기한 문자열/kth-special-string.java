@@ -7,22 +7,17 @@ public class Main {
         int k = sc.nextInt();
         String t = sc.next();
         String[] words = new String[n];
-        int count = 0;
         for (int i = 0; i < n; i++) {
             words[i] = sc.next();
-            if(words[i].substring(0, t.length()).equals(t)) count++;
         }
-        // Please write your code here.
-        String[] arr = new String[count];
-        int i=0;
+        
+        List<String> list = new ArrayList();
         for(String word : words) {
-            if(word.substring(0, t.length()).equals(t)) {
-                arr[i] = word;
-                i++;
+            if(word.startsWith(t)) {
+                list.add(word);
             }
         }
-
-        Arrays.sort(arr);
-        System.out.print(arr[k-1]);
+        Collections.sort(list);
+        System.out.print(list.get(k-1));
     }
 }
