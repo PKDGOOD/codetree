@@ -21,6 +21,6 @@ public class Main {
             }
             sum -= arr[left];
         }
-        System.out.print(min);
+        System.out.print(min == Integer.MAX_VALUE ? -1 : min);
     }
 }
