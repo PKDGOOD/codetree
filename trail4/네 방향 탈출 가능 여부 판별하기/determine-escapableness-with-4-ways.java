@@ -41,7 +41,6 @@ public class Main {
             int[] next = q.poll();
             int x = next[0];
             int y = next[1];
-            visited[x][y]++;
             if(x == n-1 && y == m-1) {
                 answer = 1;
             }
@@ -50,6 +49,7 @@ public class Main {
                 int nextY = y + dy[i];
                 if(canGo(nextX, nextY)) {
                     q.offer(new int[]{nextX, nextY});
+                    visited[x][y]++;
                 }
             }
         }
