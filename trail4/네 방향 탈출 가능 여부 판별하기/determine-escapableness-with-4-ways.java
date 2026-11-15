@@ -50,7 +50,7 @@ public class Main {
                 int nextY = y + dy[i];
                 if(canGo(nextX, nextY)) {
                     q.offer(new int[]{nextX, nextY});
-                    visited[x][y]++;
+                    visited[nextX][nextY]++;
                 }
             }
         }
