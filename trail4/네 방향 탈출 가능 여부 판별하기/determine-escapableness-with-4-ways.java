@@ -19,6 +19,7 @@ public class Main {
         // Please write your code here.
         visited = new int[n][m];
         q.offer(new int[]{0,0});
+        visited[0][0]++;
         bfs();
 
         System.out.print(answer);
